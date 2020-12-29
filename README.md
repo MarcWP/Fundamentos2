@@ -1,2 +1,2 @@
 # Fundamentos2
-Actividades desde Scripts a Técnicas
+Actividades desde Sprites a Técnicas
