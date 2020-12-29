@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Suelo
+  - jugador
+  - pies
+  - Barrera
+  - Barrera2
+  - Manager
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: BK
+    uniqueID: 2723011685
+    locked: 0
+  - name: Trastienda
+    uniqueID: 490209323
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Suelo
+    uniqueID: 2805498661
+    locked: 0
