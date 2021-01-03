@@ -40,7 +40,9 @@ En esta actividad se prepara una pequeña escena para jugar con los físicas de 
 
 ![alt tag](FisGifs/gif1.gif)
 
-En cuanto a la configuración de objetos físicos en Unity, En el siguiente gif podemos encontrar dos objetos no físicos.
+En cuanto a la configuración de objetos físicos en Unity:
+
+En el siguiente gif podemos encontrar dos objetos no físicos.
 
 ![alt tag](FisGifs/gif8.gif)
 
