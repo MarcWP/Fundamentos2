@@ -31,8 +31,11 @@ Cuando el jugador se aproxima al enemigo desde la zona superior, tocándolo, se 
 (Escena 1 - Scripts PlayerController/GroundTruth/DashPlatform/Ascensor)
 
 En esta actividad se prepara una pequeña escena para jugar con los físicas de Unity. En el siguiente gif se pueden encontrar varios ejemplos de físicas, por ejemplo: 
+
 · Una caja estática flotando en el aire,
+
 · una caja kinemática que sube y baja mediante animaciones y que no se puede alterar, 
+
 · o la caja dinámica que cae desde el cielo al activar la palanca.
 
 ![alt tag](FisGifs/gif1.gif)
@@ -121,8 +124,11 @@ La segunda paleta utiliza tiles isométricos, para los que se han generado zonas
 (Escena 1 - Scripts GameEvent/UnlockerEnter/LiftBarrier/EventSpawnEagle/GamePause/GameOver/HealthManager/Score/LeverAction)
 
 Los eventos se controlan mediante la clase GameEvent. En este gif se puede observar varias instancias donde se utilizan eventos, por ejemplo:
+
 · Inicio de partida mediante evebtos -> despausado de juego y retirada del cartel informativo al pulsar el botón "Aceptar".
+
 · Evento al usar la palanca con la letra "E", dejando caer una caja física.
+
 · Generación de varios comportamientos en base a un único evento subscrito por diferentes clases -> Al recoger la gema se agregan puntos al contador, retira una barrera e invoca a un enemigo
 
 ![alt tag](EventosGifs/gif1.gif)
@@ -170,15 +176,21 @@ Uso de pool de objetos para generar enemigos sobre los que el personaje puede sa
 (Escena 7 - Scripts CameraChange/ImpulseOnContact/VibrationOnClick)
 
 En el primer gif se puede apreciar como se utiliza cinemachine para crear 3 cámaras virtuales controladas mediante las teclas "B", "N" y "M":
+
 · Una cámara virtual A que sigue al personaje
+
 · Una cámara B que sigue al áquila con un mayor área de seguimiento
+
 · Una cámara C que sigue tanto al personaje como al águila mediante el uso de target groups de cinemachine
+
 Las cámaras A y C tienen un área de confinamiento que abarca el total de la escena. La cámara B posee un área de confinamiento más limitada.
 
 ![alt tag](CamGifs/gif1.gif)
 
 Además, se incorporan elementos a la escena que aplican vibración a las cámaras mediante el sistema de impulsos de cinemachine. hay dos formas de hacer vibrar la cámara:
+
 · Tocando la cámara, que tiene un "impulse source" asociado
+
 · Apretando el click izquierdo del ratón, que activa la condición 
 
 ![alt tag](CamGifs/gif2.gif)
