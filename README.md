@@ -1,7 +1,7 @@
 # Fundamentos2
-Actividades desde Sprites a Controlador de cámaras
+Actividades Técnicas de desarrollo 2D
 
-
+#######################################
 ########## Actividad Sprites ##########
 
 (Escena 1 - Scripts PlayerController/GroundTrusth/EnemyDistanceCheck)
@@ -18,6 +18,7 @@ Cuando el jugador se aproxima al enemigo desde la zona superior, tocándolo, se 
 
 ![alt tag](SpritesGifs/gif3.gif)
 
+#######################################
 ########## Actividad Físicas ##########
 
 (Escena 1 - Scripts PlayerController/GroundTruth/DashPlatform/Ascensor)
@@ -61,7 +62,7 @@ Usando OnCollision y OnTrigger mostramos mensajes por consola.
 
 ![alt tag](FisGifs/gif7.gif)
 
-Referente a la incorporación de elementos físicos en la escena, se han incorporado.
+Referente a la incorporación de elementos físicos en la escena, se han incorporado:
 
 Una barrera estática infranqueable.
 
@@ -81,7 +82,7 @@ Un objeto que responde ante colisiones físicas.
 
 Utilización de capas para configuración de colisiones entre objetos.
 
-![alt tag](FisGifs/gi6.gif)
+![alt tag](FisGifs/gif6.gif)
 
 ########## Actividad de generación de Tile Maps ##########
 
@@ -98,9 +99,10 @@ La segunda paleta utiliza tiles isométricos, para los que se han generado zonas
 ![alt tag](PaletasGifs/gif2.gif)
 ![alt tag](PaletasGifs/gif3.gif)
 
+###########################################
 ########## Actividad de Técnicas ##########
 
-(Escena 1 - GameEvent/UnlockerEnter/LiftBarrier/EventSpawnEagle/GamePause/GameOver/HealthManager/Score/LeverAction)
+(Escena 1 - Scripts GameEvent/UnlockerEnter/LiftBarrier/EventSpawnEagle/GamePause/GameOver/HealthManager/Score/LeverAction)
 
 Los eventos se controlan mediante la clase GameEvent. En este gif se puede observar varias instancias donde se utilizan eventos, por ejemplo:
 · Inicio de partida mediante evebtos -> despausado de juego y retirada del cartel informativo al pulsar el botón "Aceptar".
@@ -117,9 +119,10 @@ Por último, el fin de la partida se gestiona mediante eventos, de la misma mane
 
 ![alt tag](EventosGifs/gif3.gif)
 
+###########################################
 ########## Actividad de Técnicas ##########
 
-(Escena 3/Escena 4/Escena 5/Escena 6 - BoxToFace/Scroll/PCBGLoop/ScrollOnLimit/OnBorderLimit/RandomMovement/Pooler/EnemyDeathWithPool)
+(Escena 3/Escena 4/Escena 5/Escena 6 - Scripts BoxToFace/Scroll/PCBGLoop/ScrollOnLimit/OnBorderLimit/RandomMovement/Pooler/EnemyDeathWithPool)
 
 Escena con scroll de movimiento de fondo. Aparecen objetos sobre los que tiene que saltar el personaje.
 
@@ -136,3 +139,22 @@ Fondo con efecto parallax. Diferentes elementos del fondo se despalzan a diferen
 Uso de pool de objetos para generar enemigos sobre los que el personaje puede saltar para obtener puntos.
 
 ![alt tag](TecGifs/gif4.gif)
+
+########################################################
+########## Actividad de controlador de cámara ##########
+
+(Escena 7 - Scripts CameraChange/ImpulseOnContact/VibrationOnClick)
+
+En el primer gif se puede apreciar como se utiliza cinemachine para crear 3 cámaras virtuales controladas mediante las teclas "B", "N" y "M":
+· Una cámara virtual A que sigue al personaje
+· Una cámara B que sigue al áquila con un mayor área de seguimiento
+· Una cámara C que sigue tanto al personaje como al águila mediante el uso de target groups de cinemachine
+Las cámaras A y C tienen un área de confinamiento que abarca el total de la escena. La cámara B posee un área de confinamiento más limitada.
+
+![alt tag](CamGifs/gif1.gif)
+
+Además, se incorporan elementos a la escena que aplican vibración a las cámaras mediante el sistema de impulsos de cinemachine. hay dos formas de hacer vibrar la cámara:
+· Tocando la cámara, que tiene un "impulse source" asociado
+· Apretando el click izquierdo del ratón, que activa la condición 
+
+![alt tag](CamGifs/gif2.gif)
