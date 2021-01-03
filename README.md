@@ -130,11 +130,11 @@ Escena con scroll de movimiento de fondo. Aparecen objetos sobre los que tiene q
 
 Escena donde el scroll se aplica cuando el personaje abandona el fondo.
 
-![alt tag](TecGifs/gif2.gif)
+![alt tag](TecGifs/gif3.gif)
 
 Fondo con efecto parallax. Diferentes elementos del fondo se despalzan a diferentes velocidades en función del movimiento del personaje. las piezas del fondo se desplazan para dar impresión de fondo continuo.
 
-![alt tag](TecGifs/gif3.gif)
+![alt tag](TecGifs/gif2.gif)
 
 Uso de pool de objetos para generar enemigos sobre los que el personaje puede saltar para obtener puntos.
 
