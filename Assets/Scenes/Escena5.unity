@@ -245,7 +245,6 @@ GameObject:
   m_Component:
   - component: {fileID: 295903249}
   - component: {fileID: 295903253}
-  - component: {fileID: 295903252}
   - component: {fileID: 295903251}
   - component: {fileID: 295903250}
   m_Layer: 0
@@ -295,19 +294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab77d42875154d4680557c677477e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &295903252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295903248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 526c0fd84475e8142a7d045eb1d41e46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eagle: {fileID: 0}
 --- !u!114 &295903253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3611,7 +3597,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1543969159}
-  - component: {fileID: 1543969162}
   - component: {fileID: 1543969161}
   - component: {fileID: 1543969160}
   m_Layer: 5
@@ -3702,20 +3687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TotalHealth: 100
-  updatedHealth: 0
-  healthbar: {fileID: 1543969162}
---- !u!114 &1543969162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543969158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90406e938aa5ff046abdaeff46b6d27b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  healthbar: {fileID: 0}
   slider: {fileID: 1543969160}
 --- !u!1 &1549763785
 GameObject:

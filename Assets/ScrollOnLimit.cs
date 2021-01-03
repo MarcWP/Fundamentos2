@@ -6,14 +6,11 @@ public class ScrollOnLimit : MonoBehaviour
 {
     public Transform player;
 
-    // Update is called once per frame
+    //Al pulsar las teclas A o D de movimiento horizontal, aplicamos el efecto scroll
     void Update()
     {
-        /*if (gameObject.GetComponent<Rigidbody2D>().velocity.magnitude > 0)
-        { 
-            GameEvent.current.camScroll();
-        }*/
-        if (Input.anyKey)
+        
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             GameEvent.current.camScroll();
         }

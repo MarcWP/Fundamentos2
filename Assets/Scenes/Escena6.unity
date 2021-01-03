@@ -1204,7 +1204,6 @@ GameObject:
   m_Component:
   - component: {fileID: 537789332}
   - component: {fileID: 537789331}
-  - component: {fileID: 537789330}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Manager
@@ -1212,20 +1211,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &537789330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537789329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 845ad35bdcc2af44b9ea40e46aea094f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  empieza: 2
-  intervalo: 3
 --- !u!114 &537789331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1242,6 +1227,8 @@ MonoBehaviour:
     type: 3}
   pool: []
   startAmount: 3
+  empieza: 2
+  intervalo: 3
 --- !u!4 &537789332
 Transform:
   m_ObjectHideFlags: 0
@@ -6144,7 +6131,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1681077150}
-  - component: {fileID: 1681077153}
   - component: {fileID: 1681077152}
   - component: {fileID: 1681077151}
   m_Layer: 5
@@ -6235,20 +6221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TotalHealth: 100
-  updatedHealth: 0
-  healthbar: {fileID: 1681077153}
---- !u!114 &1681077153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681077149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90406e938aa5ff046abdaeff46b6d27b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  healthbar: {fileID: 0}
   slider: {fileID: 1681077151}
 --- !u!1 &1713951961
 GameObject:

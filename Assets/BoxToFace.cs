@@ -6,7 +6,8 @@ public class BoxToFace : MonoBehaviour
 {
     public float speed;
     private Vector3 ini;
-    // Update is called once per frame
+    
+    //Este script maneja el movimiento de las cajas que se mueven por el mapa a modo de obstáculo
     private void Start()
     {
         ini = gameObject.transform.position;
@@ -17,6 +18,7 @@ public class BoxToFace : MonoBehaviour
         gameObject.transform.Translate(Vector3.left * Time.deltaTime * speed);
     }
 
+    //Jugamos con las barreras colocadas para establecer principio y fin de vuelta
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Barrera")

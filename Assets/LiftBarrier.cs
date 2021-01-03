@@ -5,24 +5,16 @@ using UnityEngine;
 public class LiftBarrier : MonoBehaviour
 {
 
-    public float speed;
-    public Vector3 startPos;
-    private float lerpDuration;
-    private float timeElapsed;
-
-
+    //Nos suscribimos al evento de recogida
     private void Start()
     {
         GameEvent.current.onPickUp += liftBarrier;
-        startPos = transform.position;
-        timeElapsed = 0;
     }
 
+    //Si se recoge la gema, se levanta la barrera
     private void liftBarrier()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y + 8.7f, transform.position.z);
-
-
     }
 
 }

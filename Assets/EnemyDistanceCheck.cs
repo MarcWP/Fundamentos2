@@ -8,6 +8,7 @@ public class EnemyDistanceCheck : MonoBehaviour
 
     float Timer;
 
+    //Timer para manejar el daño
     void Update()
     {
         if (Timer > 0)
@@ -16,6 +17,7 @@ public class EnemyDistanceCheck : MonoBehaviour
         }
     }
 
+    //Si  el jugador golpea al enemigo por encima lo destruimos
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "jugador")
@@ -24,8 +26,10 @@ public class EnemyDistanceCheck : MonoBehaviour
             {
                 gameObject.GetComponent<Animator>().SetBool("explode", true);
             }
+            //Si no golpeamos al enemigo por encima recibimos daño
             else
             {
+                //Para evitar que el jugador tome daño constantemente usamos un contador y aplicamos knockback
                 if (Timer <= 0)
                 {
                     GameEvent.current.takeHit();

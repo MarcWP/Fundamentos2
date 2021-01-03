@@ -4,76 +4,32 @@ using UnityEngine;
 
 public class Pooler : MonoBehaviour
 {
-    /*[System.Serializable]
-    public class Pool
-    {
-        public string tag;
-        public GameObject prefab;
-        public int size;
-    }
-
-    public static Pooler Instance;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
-
-    public List<Pool> pools;
-    public Dictionary<string, Queue<GameObject>> poolDictionary;
-
-    private void Start()
-    {
-        poolDictionary = new Dictionary<string, Queue<GameObject>>();
-
-        foreach (Pool pool in pools)
-        {
-            Queue<GameObject> objectPool = new Queue<GameObject>();
-
-            for (int i = 0; i < pool.size; i++)
-            {
-                GameObject obj = Instantiate(pool.prefab);
-                obj.SetActive(false);
-                objectPool.Enqueue(obj);
-            }
-
-            poolDictionary.Add(pool.tag, objectPool);
-        }
-    }
-
-    public GameObject spawnFromPool (string tag, Vector3 position, Quaternion rotation)
-    {
-        if (!poolDictionary.ContainsKey(tag))
-        {
-            Debug.LogWarning("Pool con tag "+tag+" no existe.");
-            return null;
-        }
-
-        GameObject objectToSpawn=poolDictionary[tag].Dequeue();
-        objectToSpawn.SetActive(true);
-        objectToSpawn.transform.position = position;
-        objectToSpawn.transform.rotation = rotation;
-
-        poolDictionary[tag].Enqueue(objectToSpawn);
-
-        return objectToSpawn;
-    }*/
 
     public GameObject objectToPool;
     public List<GameObject> pool = new List<GameObject>();
     public int startAmount;
+    private Vector3 pos;
+    public float empieza;
+    public float intervalo;
 
+    
     private void Start()
     {
+        //Preparamos objetos predefinidos del pool
         for (int i = 0; i < startAmount; i++)
         {
             pool.Add(Instantiate(objectToPool));
             pool[i].SetActive(false);
             pool[i].transform.parent = transform;
         }
+        //Suscribimos al evento de desactivación de objetos
+        GameEvent.current.onTkPool += returnObject;
+        //Repetimos invocación de objetos desde la pool
+        InvokeRepeating("usePool", empieza, intervalo);
     }
 
-    public GameObject spawnObject(Vector3 position, Quaternion rotation)
+    //Instanciamiento de objetos desde el pool
+    private GameObject spawnObject(Vector3 position, Quaternion rotation)
     {
         GameObject toReturn;
 
@@ -95,9 +51,21 @@ public class Pooler : MonoBehaviour
         return toReturn;
     }
 
-    public void returnObject(GameObject objectToReturn)
+    //Método para devolución de objetos al pool
+    private void returnObject(GameObject objectToReturn)
     {
         pool.Add(objectToReturn);
         objectToReturn.SetActive(false);
+    }
+
+    //El enemigo se invocará dentro de un area predefinida, activándolo desde un pool
+    void usePool()
+    {
+        if (gameObject.GetComponent<Pooler>().pool.Count > 0)
+        {
+            pos = new Vector3(Random.Range(-24.0F, 24.0F), gameObject.transform.position.y, 0);
+            gameObject.GetComponent<Pooler>().spawnObject(pos, gameObject.transform.rotation);
+        }
+
     }
 }

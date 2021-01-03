@@ -22,12 +22,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        //Controles del jugador
 
+        //Acción explotar
         if (Input.GetKey(KeyCode.X))
         {
             enemigo.GetComponent<Animator>().SetBool("explode", true);
         }
-
+        //Moverse a la izquierda y flip a sprites
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
@@ -35,6 +37,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("correr", true);
         }
 
+        //Moverse a la derecha y flip a sprites
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
@@ -42,30 +45,23 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("correr", true);
         }
 
+        //Parar
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
         {
             animator.SetBool("correr", false);
         }
         
+        //La propiedad grounded se gestiona en los "pies" del jugador
         if (grounded)
         {
             if (Input.GetKey(KeyCode.W))
             {
-                //GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpSpeed);
                 rigidbody2d.velocity = Vector2.up * jumpSpeed;
                 grounded = false;
             }
         }
-        /*
-        if (enemigo)
-        {
-            if (Vector3.Distance(enemigo.transform.position, transform.position) <= 1f)
-            {
-                enemigo.GetComponent<Animator>().SetBool("explode", true);
-            }
-        }*/
-        
 
+        //Acción usar
         if (Input.GetKeyDown(KeyCode.E))
         {
             GameEvent.current.leverEvent();
@@ -73,5 +69,5 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    
+
 }
