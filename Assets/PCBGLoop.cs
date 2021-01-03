@@ -7,28 +7,23 @@ public class PCBGLoop : MonoBehaviour
     public Vector3 ini;
     public GameObject player;
     public GameObject fondo;
+    private float size;
     // Start is called before the first frame update
     void Start()
     {
         //nos subscribimos al evento de movimiento   
         ini = gameObject.transform.position;
+        size = fondo.GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
-    // Update is called once per frame
-    /*void Update()
-    {
-        if (true)
-        {
-            transform.position.x + anchoFondo < cameraTransform.position.x
-        }
-    }*/
-
+    // Si nos salimos del fondo, movemos la pantalla en consecuencia
     private void Update()
     {
-        if(player.transform.position.x> (fondo.transform.position.x+fondo.GetComponent<SpriteRenderer>().bounds.size.x/2))
-            transform.position = new Vector3(transform.position.x+ fondo.GetComponent<SpriteRenderer>().bounds.size.x, 0, -10);
-        else if (player.transform.position.x < (fondo.transform.position.x - fondo.GetComponent<SpriteRenderer>().bounds.size.x / 2))
-            transform.position = new Vector3(transform.position.x - fondo.GetComponent<SpriteRenderer>().bounds.size.x, 0, -10);
+        //Debemos tener en cuenta si nos salimos por la derecha o la izquierda
+        if (player.transform.position.x> (fondo.transform.position.x+size/2))
+            transform.position = new Vector3(transform.position.x+ size, 0, -10);
+        else if (player.transform.position.x < (fondo.transform.position.x - size / 2))
+            transform.position = new Vector3(transform.position.x - size, 0, -10);
 
     }
 

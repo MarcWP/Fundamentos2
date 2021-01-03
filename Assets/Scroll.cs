@@ -7,7 +7,7 @@ public class Scroll : MonoBehaviour
 {
     public float speed;
 
-    // Update is called once per frame
+    //Scroll de la textura localizada en el quad
     void Update()
     {
         Vector2 offset = new Vector2(Time.time * speed, 0);
