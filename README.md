@@ -3,94 +3,136 @@ Actividades desde Sprites a Controlador de cámaras
 
 
 ########## Actividad Sprites ##########
+
 (Escena 1 - Scripts PlayerController/GroundTrusth/EnemyDistanceCheck)
 
 En esta práctica se han implementado dos animaciones al personaje, "Idle" y "Run". Se aplica Flip a los sprites cuando se cambia de sentido.
+
 ![alt tag](SpritesGifs/gif1.gif)
 
 En tiempo de ejecución, la tecla X hace explotar al enemigo cuando se encuentra presente en pantalla.
+
 ![alt tag](SpritesGifs/gif2.gif)
 
 Cuando el jugador se aproxima al enemigo desde la zona superior, tocándolo, se genera una animación de explosión antes de destruirlo.
+
 ![alt tag](SpritesGifs/gif3.gif)
 
 ########## Actividad Físicas ##########
+
 (Escena 1 - Scripts PlayerController/GroundTruth/DashPlatform/Ascensor)
 
 En esta actividad se prepara una pequeña escena para jugar con los físicas de Unity. En el siguiente gif se pueden encontrar varios ejemplos de físicas, por ejemplo: 
 · Una caja estática flotando en el aire,
 · una caja kinemática que sube y baja mediante animaciones y que no se puede alterar, 
 · o la caja dinámica que cae desde el cielo al activar la palanca.
+
 ![alt tag](FisGifs/gif1.gif)
 
 En cuanto a la configuración de objetos físicos en Unity, En el siguiente gif podemos encontrar dos objetos no físicos.
+
 ![alt tag](FisGifs/gif8.gif)
 
 Un objeto dinámico y otro estático, donde un responde a la gravedad y el otro no.
+
 ![alt tag](FisGifs/gif9.gif)
 
 Dos objetos dinámicos, donde ambos responden a la gravedad y se afectan el uno al otro.
+
 ![alt tag](FisGifs/gif10.gif)
 
 Diferencias de masas a objetos dinámicos, donde se puede observar que los objetos de mayor masa resultan más dificiles de afectar.
+
 ![alt tag](FisGifs/gif11.gif)
 
 Las propiedades de un objeto isTrigger sin físicas, que ignora colisiones y se mantiene estático en el entorno.
+
 ![alt tag](FisGifs/gif12.gif)
 
 La comparación de dos objetos dinámicos donde un de ellos es isTrigger, que le lleva a atravesar el terreno.
+
 ![alt tag](FisGifs/gif13.gif)
 
 Un objeto kinemático animado, que afecta a otros objetos, pero no se ve afectado por ellos.
+
 ![alt tag](FisGifs/gif14.gif)
 
 Usando OnCollision y OnTrigger mostramos mensajes por consola.
+
 ![alt tag](FisGifs/gif7.gif)
 
 Referente a la incorporación de elementos físicos en la escena, se han incorporado.
 
 Una barrera estática infranqueable.
+
 ![alt tag](FisGifs/gif2.gif)
 
 Una zona en la que los objetos que caen en ella son impulsados hacia delante.
+
 ![alt tag](FisGifs/gif3.gif)
 
 Un objeto que es arrastrado por otro a una distancia fija.
+
 ![alt tag](FisGifs/gif4.gif)
 
 Un objeto que responde ante colisiones físicas.
+
 ![alt tag](FisGifs/gif5.gif)
 
 Utilización de capas para configuración de colisiones entre objetos.
+
 ![alt tag](FisGifs/gi6.gif)
 
 ########## Actividad de generación de Tile Maps ##########
+
 (Escena 1/Escena 2 - No hay scripts específicos asociados a esta práctica)
 
 En esta práctica se aplican dos paletas:
 
 La primera es una paleta de tiles regulares, con el que se construye el siguiente mapa. El mapa contiene obstáculos y barreras.
+
 ![alt tag](PaletasGifs/gif1.gif)
 
 La segunda paleta utiliza tiles isométricos, para los que se han generado zonas elevadas que sirven de obstáculos.
+
 ![alt tag](PaletasGifs/gif2.gif)
 ![alt tag](PaletasGifs/gif3.gif)
 
 ########## Actividad de Técnicas ##########
+
 (Escena 1 - GameEvent/UnlockerEnter/LiftBarrier/EventSpawnEagle/GamePause/GameOver/HealthManager/Score/LeverAction)
 
 Los eventos se controlan mediante la clase GameEvent. En este gif se puede observar varias instancias donde se utilizan eventos, por ejemplo:
 · Inicio de partida mediante evebtos -> despausado de juego y retirada del cartel informativo al pulsar el botón "Aceptar".
 · Evento al usar la palanca con la letra "E", dejando caer una caja física.
 · Generación de varios comportamientos en base a un único evento subscrito por diferentes clases -> Al recoger la gema se agregan puntos al contador, retira una barrera e invoca a un enemigo
+
 ![alt tag](EventosGifs/gif1.gif)
 
 Además, en el siguiente gif se puede aprecias como, con eventos, se controla la vida del personaje (representada arriba a la izquierda) al entrar en contacto con un enemigo.
+
 ![alt tag](EventosGifs/gif2.gif)
 
 Por último, el fin de la partida se gestiona mediante eventos, de la misma manera que se controla el inicio. Así, cuando la vida del personaje llega a 0, se pausa la partida, se muestra un emnsaje y se reinicia la partida al pulsar el botón "Aceptar".
+
 ![alt tag](EventosGifs/gif3.gif)
 
 ########## Actividad de Técnicas ##########
+
 (Escena 3/Escena 4/Escena 5/Escena 6 - BoxToFace/Scroll/PCBGLoop/ScrollOnLimit/OnBorderLimit/RandomMovement/Pooler/EnemyDeathWithPool)
-![alt tag](EventosGifs/gif1.gif)
+
+Escena con scroll de movimiento de fondo. Aparecen objetos sobre los que tiene que saltar el personaje.
+
+![alt tag](TecGifs/gif1.gif)
+
+Escena donde el scroll se aplica cuando el personaje abandona el fondo.
+
+![alt tag](TecGifs/gif2.gif)
+
+Fondo con efecto parallax. Diferentes elementos del fondo se despalzan a diferentes velocidades en función del movimiento del personaje. las piezas del fondo se desplazan para dar impresión de fondo continuo.
+
+![alt tag](TecGifs/gif3.gif)
+
+Uso de pool de objetos para generar enemigos sobre los que el personaje puede saltar para obtener puntos.
+
+![alt tag](TecGifs/gif4.gif)
