@@ -40,35 +40,7 @@ En esta actividad se prepara una pequeña escena para jugar con los físicas de 
 
 ![alt tag](FisGifs/gif1.gif)
 
-En cuanto a la configuración de objetos físicos en Unity:
-
-En el siguiente gif podemos encontrar dos objetos no físicos.
-
-![alt tag](FisGifs/gif8.gif)
-
-Un objeto dinámico y otro estático, donde un responde a la gravedad y el otro no.
-
-![alt tag](FisGifs/gif9.gif)
-
-Dos objetos dinámicos, donde ambos responden a la gravedad y se afectan el uno al otro.
-
-![alt tag](FisGifs/gif10.gif)
-
-Diferencias de masas a objetos dinámicos, donde se puede observar que los objetos de mayor masa resultan más dificiles de afectar.
-
-![alt tag](FisGifs/gif11.gif)
-
-Las propiedades de un objeto isTrigger sin físicas, que ignora colisiones y se mantiene estático en el entorno.
-
-![alt tag](FisGifs/gif12.gif)
-
-La comparación de dos objetos dinámicos donde un de ellos es isTrigger, que le lleva a atravesar el terreno.
-
-![alt tag](FisGifs/gif13.gif)
-
-Un objeto kinemático animado, que afecta a otros objetos, pero no se ve afectado por ellos.
-
-![alt tag](FisGifs/gif14.gif)
+El detalle referente a las distintas configuraciones físicas de Unity se encuentra localizado en el fichero markdown "Físicas"
 
 Usando OnCollision y OnTrigger mostramos mensajes por consola.
 
