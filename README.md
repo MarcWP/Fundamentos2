@@ -33,7 +33,6 @@ Cuando el jugador se aproxima al enemigo desde la zona superior, tocándolo, se 
 En esta actividad se prepara una pequeña escena para jugar con los físicas de Unity. En el siguiente gif se pueden encontrar varios ejemplos de físicas, por ejemplo: 
 
 · Una caja estática flotando en el aire,
-
 · una caja kinemática que sube y baja mediante animaciones y que no se puede alterar, 
 
 · o la caja dinámica que cae desde el cielo al activar la palanca.
