@@ -2,7 +2,10 @@
 Actividades Técnicas de desarrollo 2D
 
 #######################################
+
 ########## Actividad Sprites ##########
+
+#######################################
 
 (Escena 1 - Scripts PlayerController/GroundTrusth/EnemyDistanceCheck)
 
@@ -18,8 +21,12 @@ Cuando el jugador se aproxima al enemigo desde la zona superior, tocándolo, se 
 
 ![alt tag](SpritesGifs/gif3.gif)
 
+
 #######################################
+
 ########## Actividad Físicas ##########
+
+#######################################
 
 (Escena 1 - Scripts PlayerController/GroundTruth/DashPlatform/Ascensor)
 
@@ -84,7 +91,12 @@ Utilización de capas para configuración de colisiones entre objetos.
 
 ![alt tag](FisGifs/gif6.gif)
 
+
+##########################################################
+
 ########## Actividad de generación de Tile Maps ##########
+
+##########################################################
 
 (Escena 1/Escena 2 - No hay scripts específicos asociados a esta práctica)
 
@@ -99,8 +111,12 @@ La segunda paleta utiliza tiles isométricos, para los que se han generado zonas
 ![alt tag](PaletasGifs/gif2.gif)
 ![alt tag](PaletasGifs/gif3.gif)
 
+
 ###########################################
+
 ########## Actividad de Técnicas ##########
+
+###########################################
 
 (Escena 1 - Scripts GameEvent/UnlockerEnter/LiftBarrier/EventSpawnEagle/GamePause/GameOver/HealthManager/Score/LeverAction)
 
@@ -119,8 +135,12 @@ Por último, el fin de la partida se gestiona mediante eventos, de la misma mane
 
 ![alt tag](EventosGifs/gif3.gif)
 
+
 ###########################################
+
 ########## Actividad de Técnicas ##########
+
+###########################################
 
 (Escena 3/Escena 4/Escena 5/Escena 6 - Scripts BoxToFace/Scroll/PCBGLoop/ScrollOnLimit/OnBorderLimit/RandomMovement/Pooler/EnemyDeathWithPool)
 
@@ -140,8 +160,12 @@ Uso de pool de objetos para generar enemigos sobre los que el personaje puede sa
 
 ![alt tag](TecGifs/gif4.gif)
 
+
 ########################################################
+
 ########## Actividad de controlador de cámara ##########
+
+########################################################
 
 (Escena 7 - Scripts CameraChange/ImpulseOnContact/VibrationOnClick)
 
